@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PENA GUEST HOUSE</title>
+	<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+	<img src="nice.jpg" width="100">
+<img src="ghana.jpg" width="50"><br>
+
+
+
+	<marquee><h1 b><i>WELCOME TO PENA GUEST HOUSE</i></h1></marquee>
+
+	
+<section class="header"><i><br>
+
+	<ul>
+		<center>
+
+<div class="my-element" >
+<a href="PRICES.html" p style="color: white;"><b>PRICES</a>
+
+<a href="IMAGES.html" p style="color:white;">IMAGES</a>
+<a href="NEXT PAGE.html" p style="color:white"><b>LOCATION</a>
+<a href="VIDEOS.html" p style="color:white">VIDEOS</a>
+<a href="NEXT PAGE.html" p style="color:white"><b>ABOUT<a>
+
+</div>
+</center>
+	</ul>
+	<nav>
+	 
+		
+
+
+
+			
+	</nav>
+	<div class="text-box">
+		<h2>Pay Less, Enjoy More Of Our Services.</h2></p><br><br>
+
+<a href="NEXT PAGE.html" class="hero-btwn">Visit Us To Know More</a>
+</div>
+
+<!------JavaScript for toggle menu----->
+
+<script>
+	
+
+	var navlinks = document.getElementById('navLinks');
+
+	function showMenu(){
+
+		navLinks.style.right = "0";
+
+	}
+
+	function hideMenu(){
+
+		navLinks.style.right = "-200px";
+		
+	}
+</script>
+
+
+</section>
+
+<!------IMAGES---->
+<section class="IMAGES">
+		<div class="row">
+
+		<div class="IMAGES-col">
+			<img src="photo/pena.jpg" width="350">
+			<img src="photo/two.jpg" alt="A sample image" width="350">
+			</div>
+		</div>
+
+
+	
+	</section>
+
+
+	<section class="cta">
+		<h1>Locate Our Noble Guest House @ Fiapre-Sunyani in the Bono Ahafo Region</h1><br>
+
+		<a href="tel:+230540821375" class="hero-btwn">CONTACT US:0540821375</a><br><br>
+<h3><i>Whatsapp Us: 0540821375/0201136227</i></h3><br>
+		<center>
+<form action="process_comments.php" method="post">
+	<label for="name">Name:</label><br>
+	<input type="text"id="name" name="name"required><br>
+	<labe for="comment">comment:</label><br>
+	<textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+	<input type="submit" value="Submit Comment">
+	</form>
+	<!---Display vomments--->
+	<h2>comments</h2>
+	<div id="comments"></div><br>
+	<div class="social-media">
+<a href="https://web.facebook.com/profile.php?id=61552326447203">
+	<img src="face.jpg" alt="facebook" width="40"></a>
+	<a href="https://twitter.com/KumiRic17245464">
+		<img src="twitt.jpg" alt="twitter" width="40"></a>
+<a href="https://www.instagram.com/guesthouse955/">
+			<img src="insta.jpg" width="50"></a>
+			<a href="mailto:kumirichard856@gmail.com">
+				<img src="emai.jpg" width="40"></a>
+				<a href="https://www.youtube.com/channel/UCpUJDctStlAZip_IbMTGA9Q">
+				<img src="you.jpg" width="40"><br></a><br><br>
+
+				<video id="camera-feed" autoplay></video>
+				<script>
+					
+navigator.mediaDevices
+.getUserMedia( {video: true})
+.then(function(stream){
+	var video = document.getElementById('camera-feed');
+	video.scrObject = stream;
+})
+.catch(function(error){
+	console.log('Error accesing camera: ' + error);
+});
+
+
+
+				</script>
+					
+		
+
+
+
+
+			
+
+</div>
+
+
+
+
+
+	</section>
+
+
+	
+<center>
+	<form action="https://www.google.com/search" method="get"><br><br>
+	<input type="text" name="q" placeholder="Search...." />
+	<input type="submit" value="search" />
+	</form>
+	<div id="Search-results"></div><br><br>
+</center>
+<center>
+<button id="startRecording">Start Recording</button>
+<button id="stopRecording">Stop Recording</button>
+<audio id="audioRecording " controls></audio>
+<script src="script.js">
+const startButton = document.getElementById('startRecording');
+
+const startButton = document.getElementById('stopRecording');
+
+const audioRecording = document.getElementById('audioRecording');
+let mediaRecorder;
+let audioChunks = [];
+
+StartButton.addEevntListener('click', () => {
+	navigator.mediaDevices
+	.getUserMedia({ audio:true})
+	.then((stream) =>{
+		mediaRecorder = newMediaRecorder(stream);
+		mediaRecorder.ondataavailable = (e) => {
+			audioChunks.push(e.data);};
+			mediaRecorder.onstop = () => {
+			const audioBlob = newBlob(audioChunks,{ type:'audio/wav'});
+			audioPlayer.src = URL.createObjectURL(audioBlob)
+		};
+		mediaRecorder.start();
+	});
+});
+stopButton.addEventListener('click', () => {
+	if (mediaRecorder){
+		mediaRecorder.stop();
+	}
+});
+
+</center>
+	<script>
+
+		// Javascript code to handle the search
+		const form = document.getElementById('search-form');
+		const  searchInput = document.getElementById('search-input');
+		const searResults = document.getElementById('search-results');
+
+		form.addEventListener('submit', function (e){
+			e.preventDefault();
+
+			const searchterm = searchInput.value.toLowerCase();
+
+
+			if (searchTerm == 'example') {
+				searResults.innerHTML = 'Found an example!';
+
+			}
+
+			else{
+				searchResults.innerHTML = 'No results found.';
+			}
+		});
+
+
+	</script>
+</center>
+
+
+
+
+
+
+
+
+	<!-----JavaScript for Toggle Menu----->
+	<strong>
+		
+	</strong>
+	<center>
+		<img src="nice.jpg" width="100">
+	<img src="ghana.jpg" width="100">
+	<h3><i>BRONG-AHAFO REGION SUNYANI</i></h3>
+</center><br><br>
+
+<marquee><h3><i>welcome to pena guest house</i></h3></marquee><br><br>
+<center>
+
+
+
+</center>
+
+<script>
+
+	
+
+
+ 
+
+</body>
+</html>
